@@ -1,11 +1,10 @@
 import Image from "next/image";
-import React from "react";
-import HowToUseImage from "../../../assets/how-to-use.png";
+import HowToUseImage from "../../../../public/images/how-to-use.png";
 
 export default function HowItWorks() {
   return (
     <>
-      <section className="max-w-[1240px] w-full mx-auto mt-[49px] mb-[173px] flex flex-col gap-[102px]">
+      <section id="how-it-works" className="max-w-[1240px] w-full mx-auto mt-[49px] mb-[173px] flex flex-col gap-[102px]">
         <div className="flex flex-col gap-5 text-center">
           <h2 className="text-5xl leading-[72px] font-bold">
             Let us Do the Research, You Focus on Your <br />{" "}

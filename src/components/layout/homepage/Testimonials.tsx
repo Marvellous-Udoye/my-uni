@@ -1,11 +1,10 @@
-import React from "react";
-import TestimonialImage from "../../../assets/testimonials.png";
 import Image from "next/image";
+import TestimonialImage from "../../../../public/images/testimonials.png";
 
 export default function Testimonials() {
   return (
-    <div>
-      <section className="max-w-[1440px] w-full mx-auto py-[164px] px-[101px] bg-[#FFF5F7] flex max-md:flex-col items-center gap-16">
+    <>
+      <section id="testimonials" className="max-w-[1440px] w-full mx-auto py-[164px] px-[101px] bg-[#FFF5F7] flex max-md:flex-col items-center gap-16">
         <div className="max-w-[568px] flex flex-col">
           <h2 className="font-bold text-5xl leading-[72px] mb-5">
             What Students Are <br /> Saying About
@@ -29,43 +28,43 @@ export default function Testimonials() {
             </p>
           </div>
           <div className="flex justify-center items-center gap-[42px] p-5 ">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
-          </svg>
-        </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+            >
+              <circle cx="10" cy="10" r="10" fill="#D9D9D9" />
+            </svg>
+          </div>
         </div>
 
         <div className="w-[600px] h-[600px]">
@@ -79,6 +78,6 @@ export default function Testimonials() {
           />
         </div>
       </section>
-    </div>
+    </>
   );
 }

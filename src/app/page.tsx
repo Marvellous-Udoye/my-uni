@@ -4,6 +4,7 @@ import Hero from "@/components/layout/homepage/Hero";
 import HowItWorks from "@/components/layout/homepage/HowItWorks";
 import Testimonials from "@/components/layout/homepage/Testimonials";
 import Navbar from "@/components/layout/Navbar";
+import TakeQuiz from "../components/layout/homepage/TakeQuiz";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <HowItWorks />
       <Features />
       <Testimonials />
+      <TakeQuiz />
       <Footer />
     </div>
   );

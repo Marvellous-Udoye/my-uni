@@ -158,7 +158,7 @@ export default function Features() {
   return (
     <>
       <section
-        className="max-w-[1328px] w-full mx-auto p-12 my-[120px] rounded-[30px] flex max-lg:flex-col"
+        className="max-w-[1328px] w-full mx-auto p-12 my-[120px] rounded-[30px] flex gap-5 max-lg:flex-col"
         style={{
           background:
             "linear-gradient(67deg, #FFF 2.66%, #FFFAFB 33.61%, #FFF5F7 96.79%",

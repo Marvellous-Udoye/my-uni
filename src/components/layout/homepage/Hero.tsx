@@ -1,7 +1,7 @@
-import Button from "@/components/common/Button";
 import Image from "next/image";
-import HeroImage from "../../../assets/hero-section-image.png";
-import LineMark from "../../../assets/line-mark.svg";
+import HeroImage from "../../../../public/images/hero-section-image.png";
+import LineMark from "../../../../public/images/line-mark.svg";
+import Button from "../../common/Button";
 
 export default function Hero() {
   return (
