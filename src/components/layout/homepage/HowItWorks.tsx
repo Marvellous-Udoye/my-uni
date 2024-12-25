@@ -4,20 +4,24 @@ import HowToUseImage from "../../../../public/images/how-to-use.png";
 export default function HowItWorks() {
   return (
     <>
-      <section id="how-it-works" className="max-w-[1240px] w-full mx-auto mt-[49px] mb-[173px] flex flex-col gap-[102px]">
+      <section
+        id="how-it-works"
+        className="max-w-[1240px] w-full mx-auto px-4 py-10 lg:mt-[49px] lg:mb-[173px] flex flex-col gap-[36px] md:gap-[102px]"
+      >
         <div className="flex flex-col gap-5 text-center">
-          <h2 className="text-5xl leading-[72px] font-bold">
-            Let us Do the Research, You Focus on Your <br />{" "}
+          <h2 className="text-[32px] md:text-5xl leading-[48px] md:leading-[72px] font-bold">
+            Let Us Do the Research, You Focus on Your{" "}
+            <br className="hidden md:block" />
             <span className="text-[#056608]">Future.</span>
           </h2>
-          <p className="text-[#808080] font-medium text-[20px] leading-[30px]">
+          <p className="text-[#808080] font-medium text-base md:text-[20px] leading-6 md:leading-[30px]">
             Here&apos;s how it works, follow these simple steps to find your
             perfect university match.
           </p>
         </div>
 
         <div className="flex max-lg:flex-col-reverse items-center gap-[53px] ">
-          <div className="w-[557px] h-[491px]">
+          <div className="w-[343px] md:w-[557px] h-[302px] md:h-[491px]">
             <Image
               src={HowToUseImage}
               alt="How to use Image"
@@ -27,10 +31,10 @@ export default function HowItWorks() {
               aria-label="How to use Image"
             />
           </div>
-          <div className="flex flex-col items-center max-w-[631px]">
+          <div className="flex flex-col max-md:gap-16 items-center max-w-[631px]">
             <div className="flex items-start gap-4">
               <div className="flex flex-col items-center">
-                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px]">
+                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px] transform scale-80 md:scale-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -61,22 +65,24 @@ export default function HowItWorks() {
                     />
                   </svg>
                 </div>
-                <div className="h-20 border-l-2 border-[#FF6F91]"></div>
+                <div className="hidden md:block h-20 border-l-2 border-[#FF6F91]"></div>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-[32px] font-bold">Take the MyUni Quiz</h3>
-                <p className="text-[#808080] text-[20px] font-medium leading-[40px]">
+                <h3 className="text-[20px] md:text-[32px] font-bold">
+                  Take the MyUni Quiz
+                </h3>
+                <p className="text-[#808080] text-base md:text-[20px] font-medium leading-7 md:leading-[40px]">
                   Answer a few questions about your goals, preferences, and
                   expectations.
                 </p>
               </div>
             </div>
 
-            <div className="h-16 border-l-2 flex justify-self-start ml-[70px] w-full border-[#FF6F91]"></div>
+            <div className="hidden h-16 border-l-2 md:flex justify-self-start ml-[70px] w-full border-[#FF6F91]"></div>
 
             <div className="flex items-start gap-4">
               <div className="flex flex-col items-center">
-                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px]">
+                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px] transform scale-80 md:scale-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -114,22 +120,24 @@ export default function HowItWorks() {
                     />
                   </svg>
                 </div>
-                <div className="h-20 border-l-2 border-[#FF6F91]"></div>
+                <div className="hidden md:block h-20 border-l-2 border-[#FF6F91]"></div>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-[32px] font-bold">We Analyse the data</h3>
-                <p className="text-[#808080] text-[20px] font-medium leading-[40px]">
+                <h3 className="text-[20px] md:text-[32px] font-bold">
+                  We Analyse the data
+                </h3>
+                <p className="text-[#808080] text-base md:text-[20px] font-medium leading-7 md:leading-[40px]">
                   Our System matches you with the top schools that meet your
                   need.
                 </p>
               </div>
             </div>
 
-            <div className="h-16 border-l-2 flex justify-self-start ml-[70px] w-full border-[#FF6F91]"></div>
+            <div className="hidden h-16 border-l-2 md:flex justify-self-start ml-[70px] w-full border-[#FF6F91]"></div>
 
             <div className="flex items-start gap-4">
               <div className="flex flex-col items-center">
-                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px]">
+                <div className="py-5 px-6 border-2 border-[#FF6F91] rounded-[20px] transform scale-80 md:scale-100">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="22"
@@ -162,10 +170,10 @@ export default function HowItWorks() {
                 </div>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-[32px] font-bold">
+                <h3 className="text-[20px] md:text-[32px] font-bold">
                   Get Your Perfect Matches 💯
                 </h3>
-                <p className="text-[#808080] text-[20px] font-medium leading-[40px]">
+                <p className="text-[#808080] text-base md:text-[20px] font-medium leading-7 md:leading-[40px]">
                   Receive your top university matches in your inbox, ranked by
                   student data.
                 </p>

@@ -5,16 +5,23 @@ interface ButtonProps {
   href?: string;
   className?: string;
   children: React.ReactNode;
+  onClick?: () => void;
 }
 
-export default function Button({ href, className, children }: ButtonProps) {
+export default function Button({
+  href,
+  className,
+  children,
+  onClick,
+}: ButtonProps) {
   return (
     <>
       <Link href={href ?? ""}>
         <div
-          className={`bg-[#056608] text-white rounded-xl px-4 py-5 cursor-pointer button ${className}`}
+          onClick={onClick}
+          className={`bg-[#056608] text-white rounded-xl p-4 cursor-pointer button ${className}`}
         >
-          <p className="text-[20px] font-medium">{children}</p>
+          <p className="text-base md:text-[20px] font-medium">{children}</p>
         </div>
       </Link>
     </>
