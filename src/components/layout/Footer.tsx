@@ -1,21 +1,110 @@
+"use client";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
+
+const footerlinks = [
+  { menu: "Home", href: "/" },
+  { menu: "How it works", href: "#how-it-works" },
+  { menu: "Testimonials", href: "#testimonials" },
+];
 
 export default function Footer() {
+  const router = useRouter();
+
+  const handleScroll = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+
+    if (href.startsWith("#")) {
+      const targetId = href.replace("#", "");
+      const element = document.getElementById(targetId);
+
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      router.push(href);
+    }
+  };
+
   return (
-    <footer className="bg-[#FFCCD8] max-md:p-4">
-      <div className="max-w-[1236px] w-full mx-auto flex max-md:flex-col justify-between md:items-center px-4 py-5 md:py-[80px]">
-        <h1 className="text-[40px] md:text-[56px] font-black logo">MyUni</h1>
-        <div className="flex max-md:flex-col gap-5 md:items-center">
-          <p className="text-base md:text-[20px] font-medium">
-            Feel Free to Contact Us:
-          </p>
+    <footer className="bg-[#FFCCD8]">
+      <div className="max-w-[1240px] w-full mx-auto flex flex-col gap-10 md:gap-20 px-4 pt-8 md:pt-[80px] pb-3 md:pb-10">
+        <div className="flex max-md:flex-col gap-10 justify-between md:items-center">
+          <div className="max-w-[448px] w-full">
+            <h1 className="text-[40px] md:text-[56px] font-black logo">
+              MyUni
+            </h1>
+            <p className="text-[#404040] text-[20px] font-normal leading-8 text">
+              MyUni is a platform that helps students find the right university
+              based on their preferences, goals, and lifestyle.
+            </p>
+          </div>
+          <div className="max-w-[294px] w-full flex max-md:flex-col gap-5 justify-between text-[#404040] text-base font-medium leading-8 text">
+            <ul className="flex flex-col gap-1 ">
+              <li className="text-black text-[20px] font-semibold">MyUni</li>
+              {footerlinks.map((link, index) => (
+                <Link
+                  key={index}
+                  href={link.href}
+                  onClick={(e) => handleScroll(e, link.href)}
+                  className="hover:text-black transition-colors duration-200"
+                >
+                  {link.menu}
+                </Link>
+              ))}
+            </ul>
+            <ul>
+              <li className="text-black text-[20px] font-semibold">Support</li>
+              <li className="cursor-pointer hover:text-black transition-colors duration-200">
+                Contact Us
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="flex max-md:flex-col-reverse md:items-center justify-between w-full">
+          <div className="flex gap-2 md:gap-5 items-center md:justify-center pt-4 md:py-5">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+            >
+              <path
+                d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
+                stroke="black"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M13.8298 13.83C13.2702 14.389 12.5575 14.7695 11.7817 14.9235C11.0059 15.0774 10.2018 14.998 9.47117 14.6951C8.74052 14.3922 8.11607 13.8795 7.67674 13.2218C7.23741 12.5641 7.00293 11.7909 7.00293 11C7.00293 10.2091 7.23741 9.43588 7.67674 8.77818C8.11607 8.12048 8.74052 7.60779 9.47117 7.30491C10.2018 7.00203 11.0059 6.92256 11.7817 7.07654C12.5575 7.23052 13.2702 7.61104 13.8298 8.17"
+                stroke="black"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+            <p className="text-base text-[20px] font-medium logo">
+              MyUni, All rights reserved.
+            </p>
+          </div>
+
           <div className="flex gap-5 items-center">
             <Link href={""}>
-              <div className="p-5 w-[88px] h-[88px] rounded-full bg-white">
+              <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="49"
-                  height="48"
+                  width="24"
+                  height="24"
                   viewBox="0 0 49 48"
                   fill="none"
                 >
@@ -29,11 +118,11 @@ export default function Footer() {
               </div>
             </Link>
             <Link href={""}>
-              <div className="p-5 w-[88px] h-[88px] rounded-full bg-white">
+              <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="49"
-                  height="49"
+                  width="24"
+                  height="24"
                   viewBox="0 0 49 49"
                   fill="none"
                 >
@@ -61,36 +150,6 @@ export default function Footer() {
               </div>
             </Link>
           </div>
-        </div>
-      </div>
-      <div className="max-w-[1059px] w-full mx-auto">
-        <hr className="border border-[#056608] mt-4" />
-        <div className="flex gap-5 items-center md:justify-center px-4 pt-4 md:py-5">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="22"
-            height="22"
-            viewBox="0 0 22 22"
-            fill="none"
-          >
-            <path
-              d="M11 21C16.5228 21 21 16.5228 21 11C21 5.47715 16.5228 1 11 1C5.47715 1 1 5.47715 1 11C1 16.5228 5.47715 21 11 21Z"
-              stroke="black"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M13.8298 13.83C13.2702 14.389 12.5575 14.7695 11.7817 14.9235C11.0059 15.0774 10.2018 14.998 9.47117 14.6951C8.74052 14.3922 8.11607 13.8795 7.67674 13.2218C7.23741 12.5641 7.00293 11.7909 7.00293 11C7.00293 10.2091 7.23741 9.43588 7.67674 8.77818C8.11607 8.12048 8.74052 7.60779 9.47117 7.30491C10.2018 7.00203 11.0059 6.92256 11.7817 7.07654C12.5575 7.23052 13.2702 7.61104 13.8298 8.17"
-              stroke="black"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-          </svg>
-          <p className="text-sm md:text-base font-medium logo">
-            MyUni, All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

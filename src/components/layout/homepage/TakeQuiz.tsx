@@ -6,10 +6,11 @@ import { motion } from "framer-motion";
 export default function TakeQuiz() {
   return (
     <div className="px-4">
-      <section className="max-w-[1240px] w-full md:mx-auto my-10 md:my-[99px] flex flex-col lg:flex-row justify-between items-center gap-12 px-4 xl:pl-[74px] xl:pr-[38px] md:pt-5 py-12 md:py-20 rounded-[20px] bg-gradient-to-r from-white via-[#FFFAFB] to-[#FFF5F7] shadow-lg">
+      <section className="max-w-[1240px] w-full md:mx-auto my-10 md:my-[99px] flex flex-col lg:flex-row justify-between items-center gap-12 px-4 md:px-10 py-12 md:py-20 rounded-[20px] bg-gradient-to-br from-white via-[#FFFAFB] to-[#FFF5F7] shadow-lg">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-[600px] w-full flex flex-col gap-6 md:gap-8"
         >
@@ -27,46 +28,38 @@ export default function TakeQuiz() {
           <ul className="text-gray-800 text-lg md:text-xl space-y-3">
             <motion.li
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Personalized
-              career insights
+              <span className="text-green-600 text-xl">✓</span> Personalized choice
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Identify your
-              strengths & skills
+              <span className="text-green-600 text-xl">✓</span> Identify your wants
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Get expert
-              recommendations
-            </motion.li>
-            <motion.li
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.8, duration: 0.6, ease: "easeOut" }}
-              className="flex items-start gap-3"
-            >
-              <span className="text-green-600 text-xl">✓</span> Take the first
-              step towards success
+              <span className="text-green-600 text-xl">✓</span> Get recommendations
             </motion.li>
           </ul>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-[500px] w-full flex flex-col items-center text-center gap-6 md:gap-8"
         >
@@ -80,7 +73,8 @@ export default function TakeQuiz() {
 
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
+            whileInView={{ scale: 1, opacity: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           >
             <Button className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition">
