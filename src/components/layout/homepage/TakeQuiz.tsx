@@ -14,8 +14,8 @@ export default function TakeQuiz() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="max-w-[600px] w-full flex flex-col gap-6 md:gap-8"
         >
-          <h1 className="text-[32px] md:text-5xl font-bold leading-[48px] md:leading-[72px] tracking-[-1.28px] md:tracking-[-1.92px] max-md:text-center">
-            Your Future Awaits—Start
+          <h1 className="text-[32px] md:text-5xl font-bold leading-[48px] md:leading-[72px] tracking-[-1.28px] md:tracking-[-1.92px]">
+            Your Future Awaits—Start{" "}
             <span className="text-[#056608]">Your Journey</span> Today
           </h1>
 
@@ -33,7 +33,8 @@ export default function TakeQuiz() {
               transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Personalized choice
+              <span className="text-green-600 text-xl">✓</span> Personalized
+              choice
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -30 }}
@@ -42,7 +43,8 @@ export default function TakeQuiz() {
               transition={{ delay: 0.4, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Identify your wants
+              <span className="text-green-600 text-xl">✓</span> Identify your
+              wants
             </motion.li>
             <motion.li
               initial={{ opacity: 0, x: -30 }}
@@ -51,7 +53,8 @@ export default function TakeQuiz() {
               transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
               className="flex items-start gap-3"
             >
-              <span className="text-green-600 text-xl">✓</span> Get recommendations
+              <span className="text-green-600 text-xl">✓</span> Get
+              recommendations
             </motion.li>
           </ul>
         </motion.div>
@@ -77,9 +80,10 @@ export default function TakeQuiz() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           >
-            <Button 
-                          href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
-            className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition">
+            <Button
+              href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+              className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition"
+            >
               Take the Quiz
             </Button>
           </motion.div>
