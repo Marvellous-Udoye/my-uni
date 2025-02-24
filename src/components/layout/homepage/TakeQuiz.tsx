@@ -77,7 +77,9 @@ export default function TakeQuiz() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           >
-            <Button className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition">
+            <Button 
+                          href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+            className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition">
               Take the Quiz
             </Button>
           </motion.div>

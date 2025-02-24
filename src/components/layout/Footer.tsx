@@ -62,9 +62,12 @@ export default function Footer() {
             </ul>
             <ul>
               <li className="text-black text-[20px] font-semibold">Support</li>
-              <li className="cursor-pointer hover:text-black transition-colors duration-200">
+              <Link
+                href={"https://wa.me/+2348031925030"}
+                className="cursor-pointer hover:text-black transition-colors duration-200"
+              >
                 Contact Us
-              </li>
+              </Link>
             </ul>
           </div>
         </div>
@@ -99,7 +102,7 @@ export default function Footer() {
           </div>
 
           <div className="flex gap-5 items-center">
-            <Link href={""}>
+            <Link href={"https://wa.me/+2348031925030"}>
               <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +120,7 @@ export default function Footer() {
                 </svg>
               </div>
             </Link>
-            <Link href={""}>
+            <Link href={"mailto:olukotunflourish@gmail.com"}>
               <div className="flex items-center justify-center w-[50px] h-[50px] rounded-full bg-white">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
