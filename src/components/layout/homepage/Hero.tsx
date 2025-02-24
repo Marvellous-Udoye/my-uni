@@ -112,7 +112,7 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className={`block md:hidden mt-10 w-full transition-all duration-700 delay-500 ${
+            className={`relative block md:hidden mt-10 w-full transition-all duration-700 delay-500 ${
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -124,10 +124,41 @@ export default function Hero() {
               className="w-full h-full hover:scale-[1.02] transition-transform duration-500"
               aria-label="Mobile Hero Image"
             />
+            <div
+              className="absolute right-[1%] bottom-[40px] z-20 flex items-center gap-2 py-2.5 px-5 bg-white rounded-lg text whitespace-nowrap"
+              style={{
+                boxShadow:
+                  "-11px 66px 19px 0px rgba(0, 0, 0, 0.00), -7px 42px 17px 0px rgba(0, 0, 0, 0.01), -4px 24px 14px 0px rgba(0, 0, 0, 0.05), -2px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 3px 6px 0px rgba(0, 0, 0, 0.10)",
+              }}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="37"
+                viewBox="0 0 34 37"
+                fill="none"
+              >
+                <path
+                  d="M17.3337 1.66669L20.6806 14.9864L34.0003 18.3334L20.6806 21.6803L17.3337 35L13.9867 21.6803L0.666992 18.3334L13.9867 14.9864L17.3337 1.66669Z"
+                  fill="#FFD700"
+                />
+                <path
+                  d="M8.33366 0L9.87327 6.12706L16.0003 7.66667L9.87327 9.20627L8.33366 15.3333L6.79405 9.20627L0.666992 7.66667L6.79405 6.12706L8.33366 0Z"
+                  fill="#FFD700"
+                />
+                <path
+                  d="M7.66667 21L9.20627 27.1271L15.3333 28.6667L9.20627 30.2063L7.66667 36.3333L6.12706 30.2063L0 28.6667L6.12706 27.1271L7.66667 21Z"
+                  fill="#FFD700"
+                />
+              </svg>
+              <p className="text-[14px] md:text-base font-medium leading-[28px] md:leading-8">
+                Yayy, I&apos;m so happy with my University 😊
+              </p>
+            </div>
           </div>
         </div>
         <div
-          className={`hidden md:block w-[676px] h-[645px] transition-all duration-1000 delay-300 ${
+          className={`relative hidden md:block w-[676px] h-[645px] transition-all duration-1000 delay-300 ${
             isLoaded ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
           }`}
         >
@@ -145,6 +176,37 @@ export default function Hero() {
               e.currentTarget.style.transform = "scale(1) rotate(0deg)";
             }}
           />
+          <div
+            className="absolute right-[1%] bottom-[85px] z-20 flex items-center gap-2 py-2.5 px-5 bg-white rounded-lg text"
+            style={{
+              boxShadow:
+                "-11px 66px 19px 0px rgba(0, 0, 0, 0.00), -7px 42px 17px 0px rgba(0, 0, 0, 0.01), -4px 24px 14px 0px rgba(0, 0, 0, 0.05), -2px 11px 11px 0px rgba(0, 0, 0, 0.09), 0px 3px 6px 0px rgba(0, 0, 0, 0.10)",
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="34"
+              height="37"
+              viewBox="0 0 34 37"
+              fill="none"
+            >
+              <path
+                d="M17.3337 1.66669L20.6806 14.9864L34.0003 18.3334L20.6806 21.6803L17.3337 35L13.9867 21.6803L0.666992 18.3334L13.9867 14.9864L17.3337 1.66669Z"
+                fill="#FFD700"
+              />
+              <path
+                d="M8.33366 0L9.87327 6.12706L16.0003 7.66667L9.87327 9.20627L8.33366 15.3333L6.79405 9.20627L0.666992 7.66667L6.79405 6.12706L8.33366 0Z"
+                fill="#FFD700"
+              />
+              <path
+                d="M7.66667 21L9.20627 27.1271L15.3333 28.6667L9.20627 30.2063L7.66667 36.3333L6.12706 30.2063L0 28.6667L6.12706 27.1271L7.66667 21Z"
+                fill="#FFD700"
+              />
+            </svg>
+            <p className="text-base font-medium leadin-8">
+              Yayy, I&apos;m so happy with my University 😊
+            </p>
+          </div>
         </div>
       </section>
     </>
