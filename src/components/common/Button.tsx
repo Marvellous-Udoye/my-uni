@@ -4,6 +4,7 @@ import React from "react";
 interface ButtonProps {
   href?: string;
   target?: string;
+  style?: object;
   className?: string;
   children: React.ReactNode;
   onClick?: () => void;
@@ -12,6 +13,7 @@ interface ButtonProps {
 export default function Button({
   href,
   target,
+  style,
   className,
   children,
   onClick,
@@ -33,6 +35,7 @@ export default function Button({
       ) : (
         <button
           onClick={onClick}
+          style={style}
           className={`relative overflow-hidden bg-[#0a9e0f] hover:bg-[#07b30c] active:bg-[#056608] text-white rounded-xl px-4 py-3 cursor-pointer transition-all duration-300 transform hover:-translate-y-1 active:translate-y-0 shadow-md hover:shadow-lg active:shadow ${className}`}
         >
           <div className="absolute inset-0 bg-white/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />

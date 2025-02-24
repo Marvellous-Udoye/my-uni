@@ -1,13 +1,17 @@
+"use client";
+
 import Button from "@/components/common/Button";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface FeaturesCardProps {
   svg: React.ReactNode;
   title: string;
   content: string;
+  index: number;
+  isVisible: boolean;
 }
 
-const features: FeaturesCardProps[] = [
+const features = [
   {
     svg: (
       <svg
@@ -138,15 +142,48 @@ const features: FeaturesCardProps[] = [
   },
 ];
 
-const FeaturesCard = ({ svg, title, content }: FeaturesCardProps) => {
+const FeaturesCard = ({
+  svg,
+  title,
+  content,
+  index,
+  isVisible,
+}: FeaturesCardProps) => {
+  const delay = index * 200;
+
   return (
-    <div className="px-4 py-[26px] md:p-[26px] bg-white rounded-[20px] flex flex-col h-full w-full">
-      <div>{svg}</div>
-      <div className="px-2.5 mt-2.5 ">
-        <h6 className="font-bold text-2xl md:text-[32px] leading-12 md:leading-[64px] trcking-[-0.96px] md:tracking-[-1.28px] mt-2.5">
+    <div
+      className={`px-4 py-[26px] md:p-[26px] bg-white rounded-[20px] flex flex-col h-full w-full shadow-sm hover:shadow-md transition-all duration-500 ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+      }`}
+      style={{
+        transitionDelay: `${delay}ms`,
+        transform: isVisible ? "scale(1)" : "scale(0.95)",
+      }}
+    >
+      <div
+        className={`transition-transform duration-500 ${
+          isVisible ? "scale-100" : "scale-90"
+        }`}
+        style={{ transitionDelay: `${delay + 100}ms` }}
+      >
+        {svg}
+      </div>
+      <div className="px-2.5 mt-2.5">
+        <h6
+          className={`font-bold text-2xl md:text-[32px] leading-12 md:leading-[64px] tracking-[-0.96px] md:tracking-[-1.28px] mt-2.5 transition-all duration-500 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ transitionDelay: `${delay + 200}ms` }}
+        >
           {title}
         </h6>
-        <p className="text-[#808080] font-medium text-base md:text-[20px] leading-8 md:leading-10 tracking-[-0.64px] md:tracking-[-0.8px]">
+        <p
+          className={`text-[#808080] font-medium text-base md:text-[20px] leading-8 md:leading-10 tracking-[-0.64px] md:tracking-[-0.8px] transition-all duration-500 ${
+            isVisible ? "opacity-100" : "opacity-0"
+          }`}
+          style={{ transitionDelay: `${delay + 300}ms` }}
+        >
           {content}
         </p>
       </div>
@@ -155,19 +192,65 @@ const FeaturesCard = ({ svg, title, content }: FeaturesCardProps) => {
 };
 
 export default function Features() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [headingVisible, setHeadingVisible] = useState(false);
+  const animationTriggered = useRef(false);
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const sectionElement = sectionRef.current;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting && !animationTriggered.current) {
+          setHeadingVisible(true);
+          setTimeout(() => setIsVisible(true), 400);
+          animationTriggered.current = true;
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionElement) {
+        observer.unobserve(sectionElement);
+      }
+    };
+  }, []);
+
   return (
     <div className="max-md:px-4">
       <section
-        className="max-w-[1328px] w-full lg:mx-auto p-4 md:p-8 xl:p-12 my-10 lg:my-[120px] rounded-[20px] md:rounded-[30px] flex gap-5 max-lg:flex-col
-        lg:bg-gradient-to-r from-white via-[#FFFAFB] to-[#FFF5F7] 
-        max-lg:bg-[#FFF5F7]"
+        ref={sectionRef}
+        className="max-w-[1240px] w-full lg:mx-auto p-4 md:p-6 my-10 lg:my-[120px] rounded-[20px] md:rounded-[30px] flex max-lg:flex-col lg:bg-gradient-to-br from-white via-[#FFFAFB] to-[#FFF5F7] 
+        max-lg:bg-[#FFF5F7] overflow-hidden"
       >
-        <div className="lg:max-w-[358px] flex flex-col gap-10 justify-center">
-          <h2 className="font-bold text-[32px] md:text-5xl leading-12 md:leading-[72px] tracking-[-1.28px] md:tracking-[-1.92px] max-lg:text-center">
+        <div className="lg:max-w-[358px] flex flex-col gap-10 justify-center lg:mr-8">
+          <h2
+            className={`font-bold text-[32px] md:text-5xl leading-12 md:leading-[72px] tracking-[-1.28px] md:tracking-[-1.92px] max-lg:text-center transition-all duration-700 ${
+              headingVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
             A Better Way to <span className="text-[#056608]">Choose</span> Your
             University
           </h2>
-          <Button className="hidden lg:block max-w-fit">Take the quiz</Button>
+          <Button
+            href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+            className={`hidden lg:block max-w-fit transition-all duration-700 ${
+              headingVisible
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-8"
+            }`}
+            style={{ transitionDelay: "200ms" }}
+          >
+            Take the quiz
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 w-full">
@@ -177,12 +260,20 @@ export default function Features() {
                 svg={feature.svg}
                 title={feature.title}
                 content={feature.content}
+                index={index}
+                isVisible={isVisible}
               />
             </div>
           ))}
         </div>
 
-        <Button className="flex justify-self-center lg:hidden max-w-fit">
+        <Button
+          href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+          className={`flex justify-self-center lg:hidden max-w-fit transition-all duration-700 mt-8 ${
+            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+          }`}
+          style={{ transitionDelay: "800ms" }}
+        >
           Take the quiz
         </Button>
       </section>
