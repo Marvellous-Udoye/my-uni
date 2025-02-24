@@ -10,7 +10,7 @@ export default function Hero() {
       <section
         className="flex max-lg:flex-col max-lg:gap-10 max-lg:items-end justify-end px-4 pt-10 pb-5 md:pt-[100px] md:pb-[132px] xl:pl-10 2xl:pl-0 max-w-[1440px] xl:mx-auto w-full"
         style={{
-          background: " linear-gradient(180deg, #FFF5F7 1.47%, #FFF 91.74%",
+          background: " linear-gradient(360deg, #FFF5F7 1.47%, #FFF 91.74%",
         }}
       >
         <div className="flex flex-col lg:max-w-[689px] w-full">
