@@ -101,7 +101,7 @@ export default function WhyItMatters() {
   };
 
   return (
-    <div className="bg-[#FFF5F7]">
+    <section className="bg-[#FFF5F7]">
       <motion.div
         id="why-it-matters"
         ref={sectionRef}
@@ -238,6 +238,6 @@ export default function WhyItMatters() {
           </AnimatePresence>
         </div>
       </motion.div>
-    </div>
+    </section>
   );
 }

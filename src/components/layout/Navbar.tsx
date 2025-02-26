@@ -7,7 +7,7 @@ import Button from "../common/Button";
 const navlinks = [
   { menu: "Home", href: "/" },
   { menu: "How it works", href: "#how-it-works" },
-  { menu: "Testimonials", href: "#testimonials" },
+  { menu: "FAQs", href: "#faqs" },
 ];
 
 export default function Navbar() {
