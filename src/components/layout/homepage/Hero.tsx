@@ -204,7 +204,7 @@ export default function Hero() {
               />
             </svg>
             <p className="text-base font-medium leadin-8">
-              Yayy, I&apos;m so happy with my University 😊
+              Yayy, I&apos;m glad i made the right choice 😊
             </p>
           </div>
         </div>
