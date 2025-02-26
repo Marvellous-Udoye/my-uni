@@ -3,7 +3,7 @@ import FAQs from "@/components/layout/homepage/FAQs";
 import Features from "@/components/layout/homepage/Features";
 import Hero from "@/components/layout/homepage/Hero";
 import HowItWorks from "@/components/layout/homepage/HowItWorks";
-import Testimonials from "@/components/layout/homepage/Testimonials";
+import WhyItMatters from "@/components/layout/homepage/WhyItMatters";
 import Navbar from "@/components/layout/Navbar";
 import TakeQuiz from "../components/layout/homepage/TakeQuiz";
 
@@ -14,7 +14,7 @@ export default function Home() {
       <Hero />
       <HowItWorks />
       <Features />
-      <Testimonials />
+      <WhyItMatters />
       <FAQs />
       <TakeQuiz />
       <Footer />

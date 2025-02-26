@@ -4,56 +4,56 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import Testifier1 from "../../../../public/images/testifier1.png";
-import Testifier2 from "../../../../public/images/testifier2.png";
-import Testifier3 from "../../../../public/images/testifier3.png";
+import { default as Fact1, default as Fact4 } from "../../../../public/images/testifier1.png";
+import Fact2 from "../../../../public/images/testifier2.png";
+import Fact3 from "../../../../public/images/testifier3.png";
 
-const testimonials = [
+const factualPoints = [
   {
     id: 1,
-    name: "Tunde Alao",
-    school: "University of Lagos (UNILAG)",
-    image: Testifier1,
-    testimony:
-      "Choosing MyUni was my best decision! It matched me with the University of Lagos, where I'm getting a great education and enjoying an amazing social life. I've met incredible people, joined exciting clubs, and truly feel at home. Thanks MyUni!",
+    title: "Community Impact",
+    image: Fact1,
+    content:
+      "Research consistently shows that students who attend universities aligned with their social preferences develop stronger support networks and experience greater overall satisfaction. Finding your community isn't just about comfort—it's a crucial factor in academic persistence and mental wellbeing during your university years.",
   },
   {
     id: 2,
-    name: "Aisha Mohammed",
-    school: "Ahmadu Bello University",
-    image: Testifier2,
-    testimony:
-      "MyUni guided me to Ahmadu Bello University which perfectly aligns with my academic goals and cultural preferences. The personalized recommendations helped me find a campus where I could thrive both academically and socially. I'm so grateful!",
+    title: "Academic Specialization",
+    image: Fact2,
+    content:
+      "Students at institutions with specialized programs in their field of interest gain access to cutting-edge research opportunities, industry-experienced faculty, and specialized facilities that directly enhance learning outcomes.",
   },
   {
     id: 3,
-    name: "Chidi Okonkwo",
-    school: "University of Nigeria, Nsukka",
-    image: Testifier3,
-    testimony:
-      "The detailed university insights from MyUni helped me make an informed decision. At UNN, I've found excellent research opportunities and mentors who are helping me achieve my career goals. The campus community is exactly what I was looking for.",
+    title: "Value Assessment",
+    image: Fact3,
+    content:
+      "The correlation between tuition costs and educational quality is not always straightforward, making informed decision-making crucial for financial wellbeing. A balanced assessment of university options can prevent students from unnecessary debt while still ensuring access to quality education.",
   },
   {
     id: 4,
-    name: "Folake Adeyemi",
-    school: "Obafemi Awolowo University",
-    image: Testifier1,
-    testimony:
-      "As a first-generation student, I was overwhelmed by university options. MyUni simplified everything with personalized recommendations. OAU has become my second home with its vibrant campus life and strong academic programs. I couldn't be happier!",
+    title: "Career Pathways",
+    image: Fact4,
+    content:
+      "Different universities maintain distinct relationships with industry partners, significantly impacting internship and employment opportunities for their graduates. Students who select universities with strong connections in their desired industry often secure relevant positions more quickly after graduation.",
   },
 ];
 
-export default function Testimonials() {
+export default function WhyItMatters() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef(null);
 
   const handlePrev = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
+    setActiveIndex((prev) =>
+      prev === 0 ? factualPoints.length - 1 : prev - 1
+    );
   };
 
   const handleNext = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
+    setActiveIndex((prev) =>
+      prev === factualPoints.length - 1 ? 0 : prev + 1
+    );
   };
 
   const handleDotClick = (index: number) => {
@@ -103,7 +103,7 @@ export default function Testimonials() {
   return (
     <div className="bg-[#FFF5F7]">
       <motion.div
-        id="testimonials"
+        id="why-it-matters"
         ref={sectionRef}
         className="max-w-[1240px] w-full mx-auto py-10 md:py-16 px-4 flex max-lg:flex-col items-center lg:gap-16"
         initial="hidden"
@@ -115,11 +115,10 @@ export default function Testimonials() {
             className="font-bold text-[30px] md:text-5xl leading-[48px] md:leading-[72px] max-lg:text-center mb-8"
             variants={itemVariants}
           >
-            What Students Are <br className="hidden lg:block" /> Saying About
-            <span className="text-[#056608]"> MyUni</span>
+            Why Your University <br className="hidden lg:block" /> Choice
+            <span className="text-[#056608]"> Matters</span>
           </motion.h2>
 
-          {/* Fixed size container for mobile image */}
           <div className="lg:hidden mx-auto w-full h-[300px] mb-6 relative">
             <AnimatePresence mode="wait">
               <motion.div
@@ -133,8 +132,8 @@ export default function Testimonials() {
                 <div className="relative w-full h-full flex items-center justify-center">
                   <div className="relative w-[280px] h-[280px] rounded-[20px] overflow-hidden">
                     <Image
-                      src={testimonials[activeIndex].image}
-                      alt={`${testimonials[activeIndex].name} Testimonial`}
+                      src={factualPoints[activeIndex].image}
+                      alt={`${factualPoints[activeIndex].title} Illustration`}
                       fill
                       priority
                       sizes="(max-width: 768px) 280px, 535px"
@@ -143,11 +142,8 @@ export default function Testimonials() {
                     />
                     <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-4 px-2">
                       <h6 className="text-white font-bold text-base leading-[21px] text-center">
-                        {testimonials[activeIndex].name}
+                        {factualPoints[activeIndex].title}
                       </h6>
-                      <p className="text-white text-[14px] leading-[18px] text-center">
-                        {testimonials[activeIndex].school}
-                      </p>
                     </div>
                   </div>
                 </div>
@@ -155,23 +151,17 @@ export default function Testimonials() {
             </AnimatePresence>
           </div>
 
-          {/* Fixed height container for testimony text */}
-          <div className="h-[160px] md:h-[200px] relative overflow-hidden mb-6">
+          <div className="min-h-[200px] max-h-[240px] relative overflow-hidden mb-6">
             <AnimatePresence mode="wait">
               <motion.p
-                key={`testimony-${activeIndex}`}
-                className="font-medium text-base md:text-[20px] leading-7 md:leading-[40px] text-[#404040] max-md:text-center absolute inset-0"
+                key={`content-${activeIndex}`}
+                className="font-medium text-base md:text-[18px] leading-7 md:leading-[32px] text-[#404040] max-md:text-center absolute inset-0"
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 20 }}
                 transition={{ duration: 0.5 }}
               >
-                &quot;{" "}
-                {testimonials[activeIndex].testimony.split("Thanks MyUni")[0]}
-                {testimonials[activeIndex].testimony.includes(
-                  "Thanks MyUni"
-                ) && <span className="text-black">Thanks MyUni!</span>}
-                &quot;
+                {factualPoints[activeIndex].content}
               </motion.p>
             </AnimatePresence>
           </div>
@@ -180,16 +170,16 @@ export default function Testimonials() {
             <button
               onClick={handlePrev}
               className="p-2 focus:outline-none"
-              aria-label="Previous testimonial"
+              aria-label="Previous fact"
             >
               <ChevronLeftIcon className="size-6" />
             </button>
 
-            {testimonials.map((_, index) => (
+            {factualPoints.map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                aria-label={`Go to testimonial ${index + 1}`}
+                aria-label={`Go to fact ${index + 1}`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -212,7 +202,7 @@ export default function Testimonials() {
             <button
               onClick={handleNext}
               className="p-2 focus:outline-none"
-              aria-label="Next testimonial"
+              aria-label="Next fact"
             >
               <ChevronRightIcon className="size-6" />
             </button>
@@ -231,20 +221,17 @@ export default function Testimonials() {
             >
               <div className="relative w-full h-full rounded-[20px] overflow-hidden">
                 <Image
-                  src={testimonials[activeIndex].image}
-                  alt={`${testimonials[activeIndex].name} Testimonial`}
+                  src={factualPoints[activeIndex].image}
+                  alt={`${factualPoints[activeIndex].title} Illustration`}
                   fill
                   priority
                   sizes="535px"
                   style={{ objectFit: "cover", objectPosition: "center" }}
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent pt-8 pb-6 px-4">
-                  <h6 className="text-white font-bold text-2xl leading-[36px] text-center">
-                    {testimonials[activeIndex].name}
+                  <h6 className="text-white font-bold text-2xl md:text-3xl leading-[36px] text-center">
+                    {factualPoints[activeIndex].title}
                   </h6>
-                  <p className="text-white text-2xl leading-[30px] font-medium text-center">
-                    {testimonials[activeIndex].school}
-                  </p>
                 </div>
               </div>
             </motion.div>
