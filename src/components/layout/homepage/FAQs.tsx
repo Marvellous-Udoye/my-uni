@@ -133,7 +133,7 @@ export default function FAQs() {
                 aria-expanded={openIndex === index}
                 aria-controls={`faq-answer-${index}`}
               >
-                <span className="text-lg md:text-xl font-semibold text-[#056608]">
+                <span className="text-lg md:text-xl font-semibold">
                   {faq.question}
                 </span>
                 <span className="text-[#056608] flex-shrink-0 transition-all duration-300">
