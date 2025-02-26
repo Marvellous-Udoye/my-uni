@@ -63,7 +63,10 @@ export default function Hero() {
               isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            <Button className="min-w-[170px] relative hover:scale-105 transition-transform group overflow-hidden">
+            <Button
+              href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+              className="min-w-[170px] relative hover:scale-105 transition-transform group overflow-hidden"
+            >
               <span className="relative z-10 flex items-center justify-center gap-2">
                 Take the Quiz
                 <svg
@@ -152,7 +155,7 @@ export default function Hero() {
                 />
               </svg>
               <p className="text-[14px] md:text-base font-medium leading-[28px] md:leading-8">
-                Yayy, I&apos;m so happy with my University 😊
+                Yayy, I&apos;m glad i made the right choice 😊
               </p>
             </div>
           </div>
