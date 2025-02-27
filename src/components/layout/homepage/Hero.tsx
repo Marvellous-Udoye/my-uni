@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import {
   default as HeroImage,
@@ -91,7 +92,10 @@ export default function Hero() {
             <div className="flex items-center">
               <div className="h-12 border-l border-[#056608]/30 mx-4 hidden sm:block"></div>
 
-              <div className="group cursor-pointer">
+              <Link
+                href="https://www.linkedin.com/posts/activity-7300975980184047616-F5BR?utm_source=share&utm_medium=member_desktop&rcm=ACoAADPF_sYB7f-nz1Q9DZRkfSXqs_tHEKCo1gg"
+                className="group cursor-pointer"
+              >
                 <p className="md:px-0 py-2 text-base md:text-[20px] font-medium text-[#056608] relative hover:text-[#0a9e0f] transition-colors duration-300 flex items-center gap-2">
                   Learn More About MyUni
                   <svg
@@ -111,7 +115,7 @@ export default function Hero() {
                   </svg>
                 </p>
                 <div className="h-0.5 w-0 bg-[#056608] group-hover:w-full transition-all duration-300 mt-1"></div>
-              </div>
+              </Link>
             </div>
           </div>
           <div
