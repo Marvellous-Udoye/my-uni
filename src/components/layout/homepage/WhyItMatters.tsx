@@ -4,9 +4,10 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
-import { default as Fact1, default as Fact4 } from "../../../../public/images/testifier1.png";
-import Fact2 from "../../../../public/images/testifier2.png";
-import Fact3 from "../../../../public/images/testifier3.png";
+import { default as Fact1 } from "../../../../public/images/fact1.jpg";
+import { default as Fact4 } from "../../../../public/images/fact4.jpg";
+import Fact2 from "../../../../public/images/fact2.jpg";
+import Fact3 from "../../../../public/images/fact3.jpg";
 
 const factualPoints = [
   {
