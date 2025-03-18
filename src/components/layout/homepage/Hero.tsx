@@ -65,7 +65,7 @@ export default function Hero() {
             }`}
           >
             <Button
-              href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
               className="min-w-[170px] relative hover:scale-105 transition-transform group overflow-hidden"
             >
               <span className="relative z-10 flex items-center justify-center gap-2">

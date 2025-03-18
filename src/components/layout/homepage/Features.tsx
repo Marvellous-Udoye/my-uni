@@ -241,7 +241,7 @@ export default function Features() {
             University
           </h2>
           <Button
-            href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
             className={`hidden lg:block max-w-fit transition-all duration-700 ${
               headingVisible
                 ? "opacity-100 translate-x-0"
@@ -268,7 +268,7 @@ export default function Features() {
         </div>
 
         <Button
-          href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
           className={`flex justify-self-center lg:hidden max-w-fit transition-all duration-700 mt-8 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}

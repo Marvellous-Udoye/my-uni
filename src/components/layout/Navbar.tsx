@@ -127,7 +127,7 @@ export default function Navbar() {
         </ul>
 
         <Button
-          href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
           target="_blank"
           className="hidden md:block"
         >
@@ -238,7 +238,7 @@ export default function Navbar() {
             ))}
             <li className="px-4 py-3 transform transition-transform duration-300 hover:scale-[1.02]">
               <Button
-                href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
                 target="_blank"
                 onClick={() => setIsMenuOpen(false)}
                 className="w-full"

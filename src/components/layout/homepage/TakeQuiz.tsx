@@ -81,7 +81,7 @@ export default function TakeQuiz() {
             transition={{ delay: 0.6, duration: 0.6, ease: "easeOut" }}
           >
             <Button
-              href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
               className="w-fit px-8 py-3 text-lg shadow-md hover:shadow-lg transition"
             >
               Take the Quiz

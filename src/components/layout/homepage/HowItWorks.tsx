@@ -327,7 +327,7 @@ export default function HowItWorks() {
             }`}
           >
             <Button
-              href="https://docs.google.com/forms/d/e/1FAIpQLScIEdjMnD_q_dNjZNP_lifW4CuKnSHXe0fGypqWAoCDEIGTqA/viewform"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSfQkJ000iwaORX_--ZSiduSnUQJGNUqbiUwfV069XPXzkU2Gw/viewform?usp=sharing"
               target="_blank"
               className="hover:scale-105 transition-transform duration-300 relative overflow-hidden group"
             >
